@@ -1,10 +1,16 @@
-import { StyleSheet, Text, View } from "react-native";
+import { router } from "expo-router";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Bienvenue sur SafeWalk 🚶‍♀️</Text>
-      <Text>Choisissez un onglet ci-dessous pour commencer.</Text>
+      <Text>Démarrer un trajet</Text>
+      <Button
+        title="Voir l'historique"
+        color="blue"
+        onPress={() => router.push("/history")}
+      />
     </View>
   );
 }
